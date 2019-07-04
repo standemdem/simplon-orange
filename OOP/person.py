@@ -1,4 +1,10 @@
-class Person:
+from classtools import AttrDisplay
+
+class Person(AttrDisplay):
+    '''
+    Record and process information about people
+    Run this file directly to test its classes
+    '''
     def __init__(self, name, job = None, pay = 0):
         self.name = name
         self.job = job
@@ -10,10 +16,11 @@ class Person:
     def giveRaise(self, percent):
         self.pay = int(self.pay * (1 + percent))
     
-    def __repr__(self):
-        return f'[Person: {self.name, self.pay}]'
-
 class Manager(Person):
+    '''
+    A customized Person with special requirements
+    '''
+
     def __init__(self, name, pay):
         Person.__init__(self, name, 'mgr', pay)
 
@@ -36,7 +43,4 @@ if __name__ == '__main__':
     tom.giveRaise(.10)
     print(tom.lastName())
     print(tom)
-    print('---All three---')
-    for obj in (bob, sue, tom):
-        obj.giveRaise(.10) #exemple of polymorphism, python select the right method for each obj
-        print(obj)
+    

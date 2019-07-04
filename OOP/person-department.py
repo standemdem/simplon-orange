@@ -44,7 +44,7 @@ class Department:
 if __name__ == '__main__':
 	bob = Person('Bob Smith')
 	sue = Person('Sue Jone', job = 'dev', pay = 100000)
-	tom = Person('Tom Jones', 50000)
+	tom = Manager('Tom Jones', 50000)
 
 	development = Department(bob, sue)
 	development.addMember(tom)

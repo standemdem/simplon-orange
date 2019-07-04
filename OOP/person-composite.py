@@ -10,8 +10,8 @@ class Person:
     def giveRaise(self, percent):
         self.pay = int(self.pay * (1 + percent))
     
-    def __repr__(self):
-        return f'[Person: {self.name, self.pay}]'
+    # def __repr__(self):
+    #     return f'[Person: {self.name, self.pay}]'
 
 class Manager:
 	def __init__(self, name, pay):
@@ -23,8 +23,8 @@ class Manager:
 	def __getattr__(self, attr):
 		return getattr(self.person, attr)
 
-	def __repr__(self):
-		return str(self.person)
+	# def __repr__(self):
+	# 	return str(self.person)
 
 if __name__ == '__main__':
     #self-test code
