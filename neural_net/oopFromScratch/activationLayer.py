@@ -25,6 +25,6 @@ class ActivationLayer(Layer):
 
 	def backward_propagation(self, output_error, learning_rate):
 		'''
-
+		:return: the outputs of the derivated activation function
 		'''
 		return self.activation_prime(self.input) * output_error
